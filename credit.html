@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basuki Abdullah - Maestro Romantis Indonesia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/jpg" href="/assets/images/logo.png">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'custom-white': '#f9f7f6',
+            'romantic': '#A8998C'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .hero-bg {
+      background-color: #f9f7f6;
+    }
+
+    .credits-container {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      /* agak lebih pendek biar rapat dengan header */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -20px;
+    }
+
+    @keyframes zoomInCenter {
+      0% {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+      }
+
+      60% {
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 260px;
+      height: 260px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 50px rgba(168, 153, 140, 0.3);
+      border: 5px solid #A8998C;
+      z-index: 10;
+      animation: zoomInCenter 1.2s ease-out forwards;
+    }
+
+    .logo-container img {
+      width: 75%;
+      height: 75%;
+      object-fit: contain;
+      transition: transform 1.2s ease-out;
+    }
+
+    .team-member {
+      position: absolute;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Font styling tetap */
+    .team-name {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .team-handle {
+      font-size: 1.1rem;
+      color: #A8998C;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .team-role {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #4b5563;
+    }
+
+    /* Posisi formasi X — lebih dekat ke logo */
+    .member-1 {
+      top: 25%;
+      left: 28%;
+      transform: translate(-50%, -50%);
+    }
+
+    .member-2 {
+      top: 25%;
+      right: 28%;
+      transform: translate(50%, -50%);
+    }
+
+    .member-3 {
+      bottom: 25%;
+      left: 28%;
+      transform: translate(-50%, 50%);
+    }
+
+    .member-4 {
+      bottom: 25%;
+      right: 28%;
+      transform: translate(50%, 50%);
+    }
+
+    /* Responsive: rapatkan lagi di layar kecil */
+    @media (max-width: 768px) {
+      .team-name {
+        font-size: 1.5rem;
+      }
+
+      .team-handle {
+        font-size: 1rem;
+      }
+
+      .team-role {
+        font-size: 1rem;
+      }
+
+      .logo-container {
+        width: 180px;
+        height: 180px;
+      }
+
+      .member-1 {
+        top: 28%;
+        left: 30%;
+      }
+
+      .member-2 {
+        top: 28%;
+        right: 30%;
+      }
+
+      .member-3 {
+        bottom: 28%;
+        left: 30%;
+      }
+
+      .member-4 {
+        bottom: 28%;
+        right: 30%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .team-name {
+        font-size: 1.2rem;
+      }
+
+      .team-handle {
+        font-size: 0.9rem;
+      }
+
+      .team-role {
+        font-size: 0.9rem;
+      }
+
+      .logo-container {
+        width: 140px;
+        height: 140px;
+      }
+
+      .member-1 {
+        top: 30%;
+        left: 34%;
+      }
+
+      .member-2 {
+        top: 30%;
+        right: 34%;
+      }
+
+      .member-3 {
+        bottom: 30%;
+        left: 34%;
+      }
+
+      .member-4 {
+        bottom: 30%;
+        right: 34%;
+      }
+    }
+     .back-btn {
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border: 2px solid #A8998C;
+      color: #A8998C;
+      padding: 12px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .back-btn:hover {
+      background: #A8998C;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(168, 153, 140, 0.3);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Kembali</a>
+
+  <div class="min-h-screen flex items-center justify-center py-20 px-6">
+    <div class="max-w-6xl mx-auto w-full">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6" style="font-family: 'Playfair Display', serif;">
+          Tim Kreatif
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Orang-orang di balik website Basuki Abdullah
+        </p>
+      </div>
+  <div class="credits-container">
+    <!-- Logo tengah -->
+    <div class="logo-container">
+      <img src="assets/images/projost.png" alt="Projost Logo">
+    </div>
+
+    <!-- Kiri Atas -->
+    <div class="team-member member-1">
+      <div class="team-name">Diansyah Dwi Putra</div>
+      <div class="team-handle">@bowoditrotoar</div>
+      <div class="team-role">UI/UX Designer</div>
+    </div>
+
+    <!-- Kanan Atas -->
+    <div class="team-member member-2">
+      <div class="team-name">Hilal Al Faris</div>
+      <div class="team-handle">@hilalalfrs</div>
+      <div class="team-role">Back-end Developer</div>
+    </div>
+
+    <!-- Kiri Bawah -->
+    <div class="team-member member-3">
+      <div class="team-name">Talita Azra</div>
+      <div class="team-handle">@talitaazra_</div>
+      <div class="team-role">Front-End Dev</div>
+    </div>
+
+    <!-- Kanan Bawah -->
+    <div class="team-member member-4">
+      <div class="team-name">Sabrina Asmara</div>
+      <div class="team-handle">@staberyna</div>
+      <div class="team-role">Front-End Dev</div>
+    </div>
+  </div>
+
+  <div class="text-center mt-16">
+        <div class="inline-flex items-center justify-center bg-white rounded-full px-8 py-4 shadow-lg border-2 border-romantic">
+          <img src="assets/images/projost.png" alt="Projost" class="w-8 h-8 mr-3">
+          <span class="text-romantic font-semibold text-lg">Projost Team</span>
+        </div>
+        <p class="text-gray-500 mt-4 text-sm">
+          © 2025 Projost. All rights reserved to Pameran Indikasi
+        
+        </p>
+      </div>
+</body>
+
+</html>
